@@ -12,18 +12,21 @@ int main()
 {
 	Test1* MyTest1 = new Test1();
 
+	//MyTest1->CachedCreature = new Animal();
+	//MyTest1->CachedCreature = new Creature();
 	MyTest1->CachedCreature = new Animal();
+	cout << MyTest1->CachedCreature << endl;
 
-	Creature* MyCreature =  MyTest1->GetOwningPlayerCreature();
+	Creature* MyCreature =  MyTest1->GetOwningPlayer();
 	cout << MyCreature << endl;
 
-
-	Pawn* MyPawn =  MyTest1->GetOwningPlayerCreature();
-	cout << MyPawn << endl;
+	Animal* MyAnimal = MyTest1->GetOwningPlayer<Animal>();
 
 	
-	Animal* MyAnimal = MyTest1->GetOwningPlayerCreature<Animal>();
-	cout << MyAnimal << endl;
+	//Animal* MyAnimal = MyTest1->GetOwningPlayerCreature();
+	//cout << MyAnimal << endl;
+
+	//cout << MyAnimal->JumpHeight << endl;
 
 
 

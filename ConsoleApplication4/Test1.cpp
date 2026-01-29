@@ -3,7 +3,7 @@
 
 
 
-Creature* Test1::GetOwningPlayerCreature()
+Creature* Test1::GetOwningPlayer()
  {
 	return CachedCreature;
 }

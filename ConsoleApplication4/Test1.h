@@ -7,15 +7,16 @@ class Creature;
 class Test1
 {
 public:
-	Creature* GetOwningPlayerCreature();
+	Creature* GetOwningPlayer();
 
 	template<class T>
-	T* GetOwningPlayerCreature()
+	T* GetOwningPlayer()
 	{
-		return reinterpret_cast<T*>(GetOwningPlayerCreature());
+		return dynamic_cast<T*>(GetOwningPlayer());
     }
 
 public:
 	Creature* CachedCreature;
+
 
 };
